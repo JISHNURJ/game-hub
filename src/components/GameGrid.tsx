@@ -4,7 +4,7 @@ import useGames from "../hooks/useGames";
 import { SimpleGrid, Text } from "@chakra-ui/react";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
-import { Genre } from "../hooks/useGenre";
+import useGenre, { Genre } from "../hooks/useGenre";
 
 interface Props {
   selectedGenre: Genre | null;

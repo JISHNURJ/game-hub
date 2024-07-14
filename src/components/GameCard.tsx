@@ -1,9 +1,22 @@
 import React from "react";
 import { Game } from "../hooks/useGames";
-import { Card, CardBody, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Card,
+  CardBody,
+  Center,
+  Heading,
+  HStack,
+  Image,
+  Text,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
+import useGenre, { Genre } from "../hooks/useGenre";
+import GenreDisplay from "./GenreDisplay";
 
 interface Props {
   game: Game;
@@ -21,6 +34,9 @@ const GameCard = ({ game }: Props) => {
           />
           <CriticScore score={game.metacritic} />
         </HStack>
+        <Wrap spacing={"20px"}>
+          <GenreDisplay genre={game.genres} />
+        </Wrap>
       </CardBody>
     </Card>
   );
