@@ -34,7 +34,7 @@ const GameCard = ({ game }: Props) => {
           />
           <CriticScore score={game.metacritic} />
         </HStack>
-        <Wrap spacing={"20px"}>
+        <Wrap spacing={"20px"} mt={2}>
           <GenreDisplay genre={game.genres} />
         </Wrap>
       </CardBody>

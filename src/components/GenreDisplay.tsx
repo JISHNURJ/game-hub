@@ -9,7 +9,9 @@ const GenreDisplay = ({ genre }: Props) => {
   return (
     <>
       {genre.map((each) => (
-        <Heading fontSize={"small"}>{each.name}</Heading>
+        <Box bg={"gray"}>
+          <Heading fontSize={"small"}>{each.name}</Heading>
+        </Box>
       ))}
     </>
   );
