@@ -1,16 +1,6 @@
 import useData from "./useData";
+import { Platform } from "./useGames";
 
-interface PlatformImage {
-  image_background: string;
-}
-
-export interface Platfrom {
-  id: number;
-  name: string;
-  slug: string;
-  platform: PlatformImage[];
-}
-
-const usePlatfroms = () => useData<Platfrom>("/platforms/lists/parents");
+const usePlatfroms = () => useData<Platform>("/platforms/lists/parents");
 
 export default usePlatfroms;
